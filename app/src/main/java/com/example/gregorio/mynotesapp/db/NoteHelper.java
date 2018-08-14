@@ -51,7 +51,7 @@ public class NoteHelper {
         if (cursor.getCount() > 0) {
             do {
 
-                note = new Note();
+                note = new Note(cursor);
                 note.setId(cursor.getInt(cursor.getColumnIndexOrThrow(_ID)));
                 note.setTitle(cursor.getString(cursor.getColumnIndexOrThrow(TITLE)));
                 note.setDescription(cursor.getString(cursor.getColumnIndexOrThrow(DESCRIPTION)));

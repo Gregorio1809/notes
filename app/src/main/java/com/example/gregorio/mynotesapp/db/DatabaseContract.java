@@ -7,10 +7,10 @@ import android.provider.BaseColumns;
 public class DatabaseContract {
     public static String TABLE_NAME = "note";
 
-    static final class NoteColumns implements BaseColumns {
-        static String TITLE = "title";
-        static String DESCRIPTION = "description";
-        static String DATE = "date";
+    public static final class NoteColumns implements BaseColumns {
+        public static String TITLE = "title";
+        public static String DESCRIPTION = "description";
+        public static String DATE = "date";
     }
 
     public static final String AUTHORITY = "com.example.gregorio.mynotesapp";
@@ -20,15 +20,15 @@ public class DatabaseContract {
             .appendPath(TABLE_NAME)
             .build();
 
-    public static String getColumnString(Cursor cursor, String columnName){
+    public static String getColumnString(Cursor cursor, String columnName) {
         return cursor.getString(cursor.getColumnIndex(columnName));
     }
 
-    public static int getColumnInt(Cursor cursor, String columnName){
+    public static int getColumnInt(Cursor cursor, String columnName) {
         return cursor.getInt(cursor.getColumnIndex(columnName));
     }
 
-    public static long getColumnLong(Cursor cursor, String columnName){
+    public static long getColumnLong(Cursor cursor, String columnName) {
         return cursor.getLong(cursor.getColumnIndex(columnName));
     }
 
